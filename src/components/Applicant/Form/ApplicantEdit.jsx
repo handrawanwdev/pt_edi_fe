@@ -153,8 +153,8 @@ export default function EmployeeEdit() {
   const onSubmit = (e) => {
     e.preventDefault();
     confirmDialog({
-      message: "Do you want to delete this record?",
-      header: "Delete Confirmation",
+      message: "Do you want to edit this record?",
+      header: "Edit Confirmation",
       icon: "pi pi-info-circle",
       position: "top",
       accept: async () => {

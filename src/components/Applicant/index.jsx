@@ -74,20 +74,20 @@ export default function PaginatorBasicDemo() {
   };
 
   const deleteData = (id) => {
-   
     confirmDialog({
-      message: 'Are you sure you want to proceed?',
+      message: 'Are you sure you want to delete ?',
       header: 'Confirmation',
       icon: 'pi pi-exclamation-triangle',
       defaultFocus: 'accept',
       accept:async()=>{
         try {
+          toast.current.show({ severity: 'info', summary: 'Confirmed', detail: 'Data telah diproses', life: 3000 });
           await ApiService.delete(`/biodata/${id}`,{
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")||""}`
             }
           });
-          toast.current.show({ severity: 'success', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
+          toast.current.show({ severity: 'success', summary: 'Berhasil', detail: 'Data telah dihapus', life: 3000 });
           getAllData(page, rowsPerPage);
         } catch (error) {
           console.error("Error deleting data: ", error);
@@ -164,7 +164,7 @@ export default function PaginatorBasicDemo() {
                             type="text"
                             className="form-control mt-1"
                             id="name"
-                            placeholder="NodeJS Developer"
+                            placeholder="John Doe"
                             onChange={(e) => {
                               setFilterData({...filterData, name: e.target.value});
                             }}
@@ -173,7 +173,7 @@ export default function PaginatorBasicDemo() {
                       </div>
                       <div className="col-md-12 p-1">
                         <div className="form-group">
-                          <label htmlFor="company">Jabatan yang dilamar</label>
+                          <label htmlFor="position">Jabatan yang dilamar</label>
                           <input
                             type="text"
                             className="form-control mt-1"
@@ -187,7 +187,7 @@ export default function PaginatorBasicDemo() {
                       </div>
                       <div className="col-md-12 p-1">
                         <div className="form-group">
-                          <label htmlFor="company">Pendidikan Terakhir</label>
+                          <label htmlFor="last_education">Pendidikan Terakhir</label>
                           <input
                             type="text"
                             className="form-control mt-1"

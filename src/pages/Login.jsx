@@ -49,7 +49,7 @@ export default function Login() {
           });
           setTimeout(() => {
             navigate("/");
-          }, 500);
+          }, 1000);
         }
       })
       .catch((error) => {

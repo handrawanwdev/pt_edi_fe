@@ -64,8 +64,8 @@ export default function EmployeeAdd() {
   const onSubmit = (e) => {
     e.preventDefault();
     confirmDialog({
-      message: 'Do you want to delete this record?',
-      header: 'Delete Confirmation',
+      message: 'Do you want to add this record?',
+      header: 'Add Confirmation',
       icon: 'pi pi-info-circle',
       position: 'top',
       accept: async() => {
@@ -146,6 +146,7 @@ export default function EmployeeAdd() {
                         className="form-control border-0 border-bottom"
                         id="position"
                         placeholder="..."
+                        style={{ borderBottom:"5px solid #000 !important"}}
                         onChange={(e) =>
                           setForm({ ...form, position: e.target.value })
                         }
@@ -171,6 +172,7 @@ export default function EmployeeAdd() {
                         className="form-control border-0 border-bottom"
                         id="name"
                         placeholder="..."
+                        style={{ borderBottom:"5px solid #000 !important"}}
                         onChange={(e) =>
                           setForm({ ...form, name: e.target.value })
                         }
@@ -196,6 +198,7 @@ export default function EmployeeAdd() {
                         className="form-control border-0 border-bottom"
                         id="ktp"
                         placeholder="..."
+                        style={{ borderBottom:"5px solid #000 !important"}}
                         onChange={(e) =>
                           setForm({ ...form, ktp: e.target.value })
                         }
@@ -221,6 +224,7 @@ export default function EmployeeAdd() {
                         className="form-control border-0 border-bottom"
                         id="birth"
                         placeholder="..."
+                        style={{ borderBottom:"5px solid #000 !important"}}
                         onChange={(e) =>
                           setForm({ ...form, birth: e.target.value })
                         }
@@ -271,6 +275,7 @@ export default function EmployeeAdd() {
                         className="form-control border-0 border-bottom"
                         id="religion"
                         placeholder="..."
+                        style={{ borderBottom:"5px solid #000 !important"}}
                         onChange={(e) =>
                           setForm({ ...form, religion: e.target.value })
                         }
@@ -353,6 +358,7 @@ export default function EmployeeAdd() {
                         className="form-control border-0 border-bottom"
                         id="address_ktp"
                         placeholder="..."
+                        style={{ borderBottom:"5px solid #000 !important"}}
                         cols={30}
                         rows={5}
                         style={{ resize: "none" }}
@@ -382,6 +388,7 @@ export default function EmployeeAdd() {
                         className="form-control border-0 border-bottom"
                         id="address_live"
                         placeholder="..."
+                        style={{ borderBottom:"5px solid #000 !important"}}
                         cols={30}
                         rows={5}
                         style={{ resize: "none" }}
@@ -411,6 +418,7 @@ export default function EmployeeAdd() {
                         className="form-control border-0 border-bottom"
                         id="email"
                         placeholder="..."
+                        style={{ borderBottom:"5px solid #000 !important"}}
                         onChange={(e) =>
                           setForm({ ...form, email: e.target.value })
                         }
@@ -436,6 +444,7 @@ export default function EmployeeAdd() {
                         className="form-control border-0 border-bottom"
                         id="phone"
                         placeholder="..."
+                        style={{ borderBottom:"5px solid #000 !important"}}
                         onChange={(e) =>
                           setForm({ ...form, phone: e.target.value })
                         }
@@ -448,12 +457,12 @@ export default function EmployeeAdd() {
             <div className="col-12 m-1">
               <div className="form-group">
                 <div className="row">
-                  <div className="col-7 d-flex flex-row justify-content-between align-items-center">
+                  <div className="col-6 d-flex flex-row justify-content-between align-items-center">
                     <div className="font-weight-bolder">
                       13. &nbsp;&nbsp; ORANG TERDEKAT YANG DAPAT DIHUBUNGI
                     </div>
                   </div>
-                  <div className="col-5">
+                  <div className="col-6">
                     <div className="d-flex flex-row justify-content-between align-items-center">
                       <span>:</span>
                       <input
@@ -461,6 +470,7 @@ export default function EmployeeAdd() {
                         className="form-control border-0 border-bottom"
                         id="contact_person"
                         placeholder="..."
+                        style={{ borderBottom:"5px solid #000 !important"}}
                         onChange={(e) =>
                           setForm({ ...form, contact_person: e.target.value })
                         }
@@ -502,6 +512,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="education"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.education}
                                   onChange={(e) =>
                                     setLastEducation(
@@ -523,6 +534,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="institution"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.institution}
                                   onChange={(e) =>
                                     setLastEducation(
@@ -544,6 +556,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="major"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.major}
                                   onChange={(e) =>
                                     setLastEducation(
@@ -562,6 +575,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="year"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.year}
                                   onChange={(e) =>
                                     setLastEducation(
@@ -580,6 +594,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="gpa"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.gpa}
                                   onChange={(e) =>
                                     setLastEducation(
@@ -671,6 +686,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="course"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.course}
                                   onChange={(e) =>
                                     setSkill(
@@ -689,6 +705,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="certification"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.certification}
                                   onChange={(e) =>
                                     setSkill(
@@ -710,6 +727,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="year"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.year}
                                   onChange={(e) =>
                                     setSkill(
@@ -798,6 +816,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="company"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.company}
                                   onChange={(e) =>
                                     setWorkExperience(
@@ -816,6 +835,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="last_position"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.last_position}
                                   onChange={(e) =>
                                     setWorkExperience(
@@ -837,6 +857,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="last_income"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.last_income}
                                   onChange={(e) =>
                                     setWorkExperience(
@@ -858,6 +879,7 @@ export default function EmployeeAdd() {
                                   className="form-control border-0 border-bottom"
                                   id="text"
                                   placeholder="..."
+                                  style={{ borderBottom:"5px solid #000 !important"}}
                                   value={item.year}
                                   onChange={(e) =>
                                     setWorkExperience(
@@ -998,6 +1020,7 @@ export default function EmployeeAdd() {
                         className="form-control border-0 border-bottom"
                         id="text"
                         placeholder="..."
+                        style={{ borderBottom:"5px solid #000 !important"}}
                         onChange={(e) =>
                           setForm({ ...form, salary: e.target.value })
                         }
